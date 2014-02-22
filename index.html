@@ -5,5 +5,20 @@
 </head>
 <body style="background-image:url('turtwig.jpg'); background-repeat: no-repeat;">
 <h1>Introducing Twiggy</h1>
+<span id="login"></span>
+<script src="https://www.paypalobjects.com/js/external/api.js"></script>
+<script>
+alert(document.URL);
+paypal.use( ["login"], function(login) {
+  login.render ({
+    "appid": "AVGMWBDcyX9Tq0kAhaQjDbXAv3U_xhS5Sc1IO2N-Vv7aLmR4kNVnF0Urdkmf",
+    "authend": "sandbox",
+    "scopes": "profile email address phone https://uri.paypal.com/services/paypalattributes",
+    "containerid": "login",
+    "locale": "en-us",
+    "returnurl": "http://www.example.com"
+  });
+});
+</script>
 </body>
 </html>
