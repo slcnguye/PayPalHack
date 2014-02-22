@@ -1,0 +1,3 @@
+<feature name="PayPalMobile">
+   <param name="android-package" value="com.paypal.android.sdk.phonegap.PayPalMobilePGPlugin" />
+ </feature>
