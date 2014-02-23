@@ -1,4 +1,4 @@
-C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\gen\com\phonegap\helloworld\R.java \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\gen\com\phonegap\twiggy\R.java \
  : C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\res\drawable\icon.png \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\res\drawable-hdpi\icon.png \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\res\drawable-ldpi\icon.png \

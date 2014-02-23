@@ -33,12 +33,15 @@ C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\ww
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\spec.html \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\success.html \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\css\index.css \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\img\ajax-loader.gif \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\img\Background.png \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\img\logo.png \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\img\twiggy_logo.png \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\img\twiggy_logo_no_shadow.png \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\js\cordova.js \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\js\index.js \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\js\parserBecauseWhyNot.js \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\js\PayPalMobilePGPlugin.js \
-C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\js\phonegap.js \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\plugins\org.apache.cordova.camera \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\plugins\org.apache.cordova.device \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\plugins\org.apache.cordova.dialogs \

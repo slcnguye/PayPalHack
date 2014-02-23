@@ -1,12 +1,13 @@
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes.dex : \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\paypal\android\sdk\phonegap\PayPalMobilePGPlugin.class \
-C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\phonegap\helloworld\BuildConfig.class \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\phonegap\helloworld\HelloWorld.class \
-C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\phonegap\helloworld\R$attr.class \
-C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\phonegap\helloworld\R$drawable.class \
-C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\phonegap\helloworld\R$string.class \
-C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\phonegap\helloworld\R$xml.class \
-C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\phonegap\helloworld\R.class \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\phonegap\twiggy\BuildConfig.class \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\phonegap\twiggy\HelloWorld.class \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\phonegap\twiggy\R$attr.class \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\phonegap\twiggy\R$drawable.class \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\phonegap\twiggy\R$string.class \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\phonegap\twiggy\R$xml.class \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\phonegap\twiggy\R.class \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\org\apache\cordova\camera\CameraLauncher.class \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\org\apache\cordova\camera\ExifHelper.class \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\org\apache\cordova\camera\FileHelper.class \
