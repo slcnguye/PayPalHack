@@ -150,5 +150,6 @@ function on_keyup() {
 
 var buyButton = document.getElementById("buyButton");
 buyButton.onclick = function(e) {
+  alert("click");
   showConfirmationPage("Hey", "20", "nice description bit long but good test yolo swag", "success.html", "index.html");
 }

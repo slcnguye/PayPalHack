@@ -89,7 +89,7 @@ function showConfirmationPage(place, price, desc, success_url, fail_url) {
   window.plugins.PayPalMobile.setEnvironment("PayPalEnvironmentSandbox");
   window.plugins.PayPalMobile.prepareForPayment("AVGMWBDcyX9Tq0kAhaQjDbXAv3U_xhS5Sc1IO2N-Vv7aLmR4kNVnF0Urdkmf");
   } catch (err) {
-    alert(err.message);
+    // alert("Error preparing for payment" + err.message);
   }
 
   window.location.href = "confirm.html"
@@ -111,13 +111,13 @@ function on_pay() {
   var completionCallback = function(proofOfPayment) {
     // TODO: Send this result to the server for verification;
     // see https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/ for details.
-    alert("Proof of payment: " + JSON.stringify(proofOfPayment));
+    // alert("Proof of payment: " + JSON.stringify(proofOfPayment));
     console.log("Proof of payment: " + JSON.stringify(proofOfPayment));
     window.location.href = params.success_url;
   }
 
   var cancelCallback = function(reason) {
-    alert("Payment cancelled: " + reason);
+    // alert("Payment cancelled: " + reason);
     console.log("Payment cancelled: " + reason);
     window.location.href = params.fail_url;
   }
@@ -127,7 +127,7 @@ function on_pay() {
     window.plugins.PayPalMobile.setEnvironment("PayPalEnvironmentSandbox");
     window.plugins.PayPalMobile.presentPaymentUI("AVGMWBDcyX9Tq0kAhaQjDbXAv3U_xhS5Sc1IO2N-Vv7aLmR4kNVnF0Urdkmf", "rr3lin+paypal-facilitator@gmail.com", "amy@twiggy.com", payment, completionCallback, cancelCallback);
   } catch (err) {
-    alert(err.message);
+    alert("Error launching paypal " + err.message);
   }
 }
 

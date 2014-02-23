@@ -31,7 +31,7 @@
     
     function errorCallback(errorxhr, errorType, exception) {//Triggered if an error communicating with server  
         var errorMessage = exception || xhr.statusText; //If exception null, then default to xhr.statusText  
-        alert( "There was an error creating your contact: " + errorMessage );  
+        // alert( "There was an error creating your contact: " + errorMessage );  
     }   
 
     function onSuccess() {
@@ -72,7 +72,7 @@
                     var parsedObject = parseTheShitOutOfIt(text);
                 }
                 catch (err) {
-                    alert(err.message);
+                    // alert(err.message);
                 }
                 finally {
                     if (parsedObject != null) {
@@ -90,7 +90,7 @@
                 }
             }, function (error) {
                 // Request unsuccessful
-                alert('Could not parse file, please try again');
+                // alert('Could not parse file, please try again');
 
 
                 // Showing error dialog
