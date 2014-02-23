@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="button.css" />
+    <style>
+      body {
+        font-family: "Helvetica Neue",Arial,sans-serif;
+        font-size: 0.8em;
+      }
+      fieldset {
+        background: linear-gradient(rgba(150,150,250,1), rgba(30,100,255,0.3)); /* Standard syntax (must be last) */
+        width: 80%;
+        margin: 0 auto;
+        padding: 0 5% 5% 5%;
+        border-radius: 15px;
+      }
+      .center {
+        width: 70%;
+        margin: 0 auto;
+      }
+
+      label {
+        width: 30%;
+        display: inline;
+      }
+      .line {
+        padding: 5%;
+        clear: both;
+        display: block;
+      }
+    </style>
+  </head>
+  <body onload="on_confirm_load()">
+    <fieldset>
+      <div class="center">
+      <h2>Confirm Payment</h2>
+      <div class="line">
+      <label>Restaurant: </label>
+      <label id="place">Demo</label>
+      </div>
+      <div class="line">
+      <label>Description: </label>
+      <label id="desc">3 Enchilados</label>
+      </div>
+      <div class="line"></div>
+
+     <div class="line">
+      <label>Price: $</label>
+      <label id="price">10.00</label>
+      </div>
+
+      <div class="line">
+      <label>Tip:&nbsp;&nbsp;&nbsp;&nbsp;$</label>
+      <input id="tip" type="text" style="width:40px" onkeyup="on_keyup()"></input>
+      </div>
+      <div class="line">
+      <label>Total: $</label>
+      <label id="total">0.00</label>
+      </div>
+
+
+      <h3>
+        <a onclick="on_pay()" class="pay-button">Pay</a>
+        <a onclick="on_cancel()" class="cancel-button">Cancel</a>
+    </h3>
+    </div>
+    </fieldset>
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/PayPalMobilePGPlugin.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>

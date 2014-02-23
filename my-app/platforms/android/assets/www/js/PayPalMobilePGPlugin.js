@@ -3,8 +3,6 @@
 //
 //
 
-alert ("Loaded PGPlugin");
-
 function PayPalPayment(amount, currency, shortDescription) {
   this.amount = amount;
   this.currency = currency;
