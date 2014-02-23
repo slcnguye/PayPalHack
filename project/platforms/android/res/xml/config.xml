@@ -39,7 +39,7 @@
         A new way to pay for your bill
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
-        Twiggy Team
+        Team Twiggy
     </author>
     <feature name="http://api.phonegap.com/1.0/device" />
     <feature name="PayPalMobile">
