@@ -214,3 +214,7 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+project/platforms/android/bin/classes.dex.d
+project/platforms/android/bin/classes.dex.d
+project/platforms/android/bin/proguard.txt
+project/platforms/android/gen/R.java.d
