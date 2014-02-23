@@ -50,7 +50,7 @@ var app = {
 
 var buyButton = document.getElementById("buyButton");
 buyButton.onclick = function(e) {
-
+  alert("ARGGGGG!");
   // See PayPalMobilePGPlugin.js for full documentation
   // set environment you want to use
   window.plugins.PayPalMobile.setEnvironment("PayPalEnvironmentNoNetwork");
