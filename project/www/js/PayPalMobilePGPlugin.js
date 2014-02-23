@@ -3,7 +3,6 @@
 //
 //
 
-alert("loaded pgpplugin");
 
 function PayPalPayment(amount, currency, shortDescription) {
   this.amount = amount;
@@ -100,7 +99,6 @@ PayPalMobile.prototype.presentPaymentUI = function(clientId, email, payerId, pay
  * Plugin setup boilerplate.
  */
 cordova.addConstructor(function() {
-alert("defined plugin");
   if (!window.plugins) {
     window.plugins = {};
   }
