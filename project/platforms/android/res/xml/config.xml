@@ -42,6 +42,9 @@
         PhoneGap Team
     </author>
     <feature name="http://api.phonegap.com/1.0/device" />
+    <feature name="PayPalMobile">
+        <param name="android-package" value="com.paypal.android.sdk.phonegap.PayPalMobilePGPlugin" />
+    </feature>
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />

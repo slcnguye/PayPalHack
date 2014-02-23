@@ -50,10 +50,14 @@
     // A button will call this function
     //
     function capturePhoto() {
-      // Take picture using device camera and retrieve image as base64-encoded string
-      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
-          destinationType: destinationType.FILE_URI,
-          correctOrientation: true});
+        try {
+            // Take picture using device camera and retrieve image as base64-encoded string
+            navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+                destinationType: destinationType.FILE_URI,
+                correctOrientation: true}); }
+        catch (err) {
+            alert(err.message);
+        }
     }
 
     // Called if something bad happens.
@@ -70,5 +74,10 @@
     <button onclick="capturePhoto();">Capture Receipt</button> <br>
     <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
     <img style="display:none;" id="largeImage" src="" />
+    <!--<script type="text/javascript" src="js/PayPalMobilePGPlugin.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script> -->
   </body>
 </html>

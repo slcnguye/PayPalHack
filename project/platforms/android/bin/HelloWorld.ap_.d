@@ -13,7 +13,9 @@ C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\res\d
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\res\drawable-xhdpi\icon.png \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\after_parse.html \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\button.css \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\config.xml \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\confirm.html \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\cordova-1.6.1.js \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\cordova.js \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\cordova_plugins.js \
@@ -28,11 +30,14 @@ C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\ww
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\process_receipt.html \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\res \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\spec \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\spec.html \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\success.html \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\css\index.css \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\img\logo.png \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\js\cordova.js \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\js\index.js \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\js\parserBecauseWhyNot.js \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\js\PayPalMobilePGPlugin.js \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\js\phonegap.js \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\plugins\org.apache.cordova.camera \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\assets\www\plugins\org.apache.cordova.device \

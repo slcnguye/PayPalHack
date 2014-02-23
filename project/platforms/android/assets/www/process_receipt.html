@@ -4,7 +4,8 @@
     <title>Capture Photo</title>
 
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/parserBecauseWhyNot.js"></script>
+      <script type="text/javascript" charset="utf-8" src="js/parserBecauseWhyNot.js"></script>
+      <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
       <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
       <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -112,8 +113,7 @@
                             localStorage.description = parsedObject.Desc;
                         }
                     }
-
-                    alert(localStorage.price + localStorage.place + localStorage.desc);
+                    document.location = "confirm.html";
                 }
             }, function (error) {
                 // Request unsuccessful
@@ -126,9 +126,9 @@
                     case FileTransferError.INVALID_URL_ERR: navigator.notification.alert("Invalid URL.", null, "Failed"); break;
                     case FileTransferError.CONNECTION_ERR: navigator.notification.alert("Connection error.", null, "Failed"); break;
                 }
+                document.location = "confirm.html";
             }, options);
 
-            //document.location = "confirm.html";
     }
 
 

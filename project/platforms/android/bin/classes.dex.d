@@ -1,4 +1,5 @@
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes.dex : \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\paypal\android\sdk\phonegap\PayPalMobilePGPlugin.class \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\phonegap\helloworld\BuildConfig.class \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\phonegap\helloworld\HelloWorld.class \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\com\phonegap\helloworld\R$attr.class \
@@ -95,3 +96,4 @@ C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\class
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\org\apache\cordova\mediacapture\FileHelper.class \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\classes\org\apache\cordova\vibration\Vibration.class \
 C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\dexedLibs\classes-86de5ff51ccfd14fe79ef306a96a999c.jar \
+C:\Users\carlosg\Documents\GitHub\PayPalHack\project\platforms\android\bin\dexedLibs\PayPalAndroidSDK-e0a44d6929650733a645485b9f9ea16b.jar \

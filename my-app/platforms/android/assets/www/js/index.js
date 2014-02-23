@@ -86,7 +86,7 @@ function showConfirmationPage(place, price, desc, success_url, fail_url) {
 
   // See PayPalMobilePGPlugin.js for full documentation
   try {
-  window.plugins.PayPalMobile.setEnvironment("PayPalEnvironmentNoNetwork");
+  window.plugins.PayPalMobile.setEnvironment("PayPalEnvironmentSandbox");
   window.plugins.PayPalMobile.prepareForPayment("AVGMWBDcyX9Tq0kAhaQjDbXAv3U_xhS5Sc1IO2N-Vv7aLmR4kNVnF0Urdkmf");
   } catch (err) {
     alert(err.message);
@@ -106,7 +106,6 @@ function on_confirm_load() {
 function on_pay() {
   var params = decodeParams();
   params.price = Number(document.getElementById("total").innerHTML);
-  alert (params.price);
   var payment = new PayPalPayment(params.price, "USD", params.place + ": " + params.desc);
 
   var completionCallback = function(proofOfPayment) {
@@ -125,8 +124,6 @@ function on_pay() {
 
   // launch UI, the PayPal UI will be present on screen until user cancels it or payment completed
   try {
-    alert ("try");
-    window.plugins.PayPalMobile.setEnvironment("PayPalEnvironmentNoNetwork");
     window.plugins.PayPalMobile.presentPaymentUI("AVGMWBDcyX9Tq0kAhaQjDbXAv3U_xhS5Sc1IO2N-Vv7aLmR4kNVnF0Urdkmf", "rr3lin+paypal-facilitator@gmail.com", "amy@twiggy.com", payment, completionCallback, cancelCallback);
   } catch (err) {
     alert(err.message);
