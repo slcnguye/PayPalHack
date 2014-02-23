@@ -14,5 +14,5 @@
 -keep class com.paypal.android.sdk.payments.PaymentMethodActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:14
--keep class com.phonegap.helloworld.HelloWorld { <init>(...); }
+-keep class com.phonegap.twiggy.HelloWorld { <init>(...); }
 

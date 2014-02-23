@@ -4,6 +4,9 @@
     <description>
         A new way to pay for your bill
     </description>
+    <author email="support@phonegap.com" href="http://phonegap.com">
+        Team Twiggy
+    </author>
     <access origin="*" />
     <content src="index.html" />
     <preference name="loglevel" value="DEBUG" />
@@ -34,13 +37,6 @@
     <feature name="Vibration">
         <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
     </feature>
-    <name>Twiggy</name>
-    <description>
-        A new way to pay for your bill
-    </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        Team Twiggy
-    </author>
     <feature name="http://api.phonegap.com/1.0/device" />
     <feature name="PayPalMobile">
         <param name="android-package" value="com.paypal.android.sdk.phonegap.PayPalMobilePGPlugin" />
