@@ -97,9 +97,9 @@ function showConfirmationPage(place, price, desc, success_url, fail_url) {
 
 function on_confirm_load() {
   var params = decodeParams();
-  document.getElementById("place").innerHTML = params.place;
-  document.getElementById("price").innerHTML = params.price;
-  document.getElementById("desc").innerHTML = params.desc;
+  document.getElementById("place").value = params.place;
+  document.getElementById("price").value = params.price;
+  document.getElementById("desc").value = params.desc;
   on_keyup();
 }
 
