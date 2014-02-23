@@ -124,6 +124,7 @@ function on_pay() {
 
   // launch UI, the PayPal UI will be present on screen until user cancels it or payment completed
   try {
+    window.plugins.PayPalMobile.setEnvironment("PayPalEnvironmentSandbox");
     window.plugins.PayPalMobile.presentPaymentUI("AVGMWBDcyX9Tq0kAhaQjDbXAv3U_xhS5Sc1IO2N-Vv7aLmR4kNVnF0Urdkmf", "rr3lin+paypal-facilitator@gmail.com", "amy@twiggy.com", payment, completionCallback, cancelCallback);
   } catch (err) {
     alert(err.message);
