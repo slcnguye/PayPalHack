@@ -55,7 +55,7 @@ buyButton.onclick = function(e) {
   try {
   // See PayPalMobilePGPlugin.js for full documentation
   // set environment you want to use
-  window.plugins.PayPalMobile.setEnvironment("PayPalEnvironmentNoNetwork");
+  window.plugins.PayPalMobile.setEnvironment("PayPalEnvironmentSandbox");
 
   // create a PayPalPayment object, usually you would pass parameters dynamically
   var payment = new PayPalPayment("1.99", "USD", "Awesome saws");
@@ -64,16 +64,19 @@ buyButton.onclick = function(e) {
   var completionCallback = function(proofOfPayment) {
     // TODO: Send this result to the server for verification;
     // see https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/ for details.
+    alert("Proof of payment: " + JSON.stringify(proofOfPayment));
     console.log("Proof of payment: " + JSON.stringify(proofOfPayment));
   }
 
   // define a callback if payment has been canceled
   var cancelCallback = function(reason) {
+    alert("Payment cancelled: " + reason);
     console.log("Payment cancelled: " + reason);
   }
 
   // launch UI, the PayPal UI will be present on screen until user cancels it or payment completed
-  window.plugins.PayPalMobile.presentPaymentUI("AVGMWBDcyX9Tq0kAhaQjDbXAv3U_xhS5Sc1IO2N-Vv7aLmR4kNVnF0Urdkmf", "rr3lin+paypal@gmail.com", "someuser@somedomain.com", payment, completionCallback, cancelCallback);
+  window.plugins.PayPalMobile.prepareForPayment("AVGMWBDcyX9Tq0kAhaQjDbXAv3U_xhS5Sc1IO2N-Vv7aLmR4kNVnF0Urdkmf");
+  window.plugins.PayPalMobile.presentPaymentUI("AVGMWBDcyX9Tq0kAhaQjDbXAv3U_xhS5Sc1IO2N-Vv7aLmR4kNVnF0Urdkmf", "rr3lin+paypal-facilitator@gmail.com", "amy@twiggy.com", payment, completionCallback, cancelCallback);
 
   alert("done");
 

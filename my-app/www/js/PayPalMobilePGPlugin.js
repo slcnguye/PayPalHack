@@ -71,6 +71,8 @@ PayPalMobile.prototype.environment = function(callback) {
  */
 PayPalMobile.prototype.prepareForPayment = function(clientId) {
   var failureCallback = function(message) {
+    alert("Could not perform prepareForPurchase");
+    alert(message);
     console.log("Could not perform prepareForPurchase " + message);
   };
 
