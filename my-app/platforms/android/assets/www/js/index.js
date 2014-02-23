@@ -51,6 +51,8 @@ var app = {
 var buyButton = document.getElementById("buyButton");
 buyButton.onclick = function(e) {
   alert("ARGGGGG!");
+
+  try {
   // See PayPalMobilePGPlugin.js for full documentation
   // set environment you want to use
   window.plugins.PayPalMobile.setEnvironment("PayPalEnvironmentNoNetwork");
@@ -71,5 +73,11 @@ buyButton.onclick = function(e) {
   }
 
   // launch UI, the PayPal UI will be present on screen until user cancels it or payment completed
-  window.plugins.PayPalMobile.presentPaymentUI("YOUR_CLIENT_ID", "YOUR_PAYPAL_EMAIL_ADDRESS", "someuser@somedomain.com", payment, completionCallback, cancelCallback);
+  window.plugins.PayPalMobile.presentPaymentUI("AVGMWBDcyX9Tq0kAhaQjDbXAv3U_xhS5Sc1IO2N-Vv7aLmR4kNVnF0Urdkmf", "rr3lin+paypal@gmail.com", "someuser@somedomain.com", payment, completionCallback, cancelCallback);
+
+  alert("done");
+
+  } catch (err) {
+    alert(err.message);
+  }
 }
