@@ -5,6 +5,7 @@
 
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
       <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
       <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script type="text/javascript" charset="utf-8">
 
@@ -51,7 +52,8 @@
     function capturePhoto() {
       // Take picture using device camera and retrieve image as base64-encoded string
       navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
-          destinationType: destinationType.FILE_URI});
+          destinationType: destinationType.FILE_URI,
+          correctOrientation: true});
     }
 
     // Called if something bad happens.

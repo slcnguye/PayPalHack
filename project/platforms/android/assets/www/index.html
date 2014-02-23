@@ -5,6 +5,7 @@
 
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
       <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
       <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script type="text/javascript" charset="utf-8">
 
@@ -25,20 +26,6 @@
     // Called when a photo is successfully retrieved
     //
     function onPhotoDataSuccess(imageData) {
-      // Uncomment to view the base64-encoded image data
-      // Get image handle
-      //
-      var smallImage = document.getElementById('smallImage');
-
-      // Unhide image elements
-      //
-      smallImage.style.display = 'block';
-
-      // Show the captured photo
-      // The in-line CSS rules are used to resize the image
-      //
-      smallImage.src = "data:image/jpeg;base64," + imageData;
-
       localStorage.imageData = imageData;
       document.location = "process_receipt.html";
     }
@@ -65,24 +52,8 @@
     function capturePhoto() {
       // Take picture using device camera and retrieve image as base64-encoded string
       navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
-          destinationType: destinationType.FILE_URI});
-    }
-
-    // A button will call this function
-    //
-    function capturePhotoEdit() {
-      // Take picture using device camera, allow edit, and retrieve image as base64-encoded string
-      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
-          destinationType: destinationType.FILE_URI});
-    }
-
-    // A button will call this function
-    //
-    function getPhoto(source) {
-      // Retrieve image file location from specified source
-      navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
-        destinationType: destinationType.FILE_URI,
-        sourceType: source });
+          destinationType: destinationType.FILE_URI,
+          correctOrientation: true});
     }
 
     // Called if something bad happens.
