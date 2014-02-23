@@ -1,1 +1,1 @@
- : C:\Users\Ted Turner\Documents\GitHub\PayPalHack\my-app\platforms\android\CordovaLib\bin\AndroidManifest.xml \
+ : /home/rui/paypal/PayPalHack/my-app/platforms/android/CordovaLib/bin/AndroidManifest.xml \
