@@ -48,39 +48,65 @@ var app = {
     }
 };
 
-var buyButton = document.getElementById("buyButton");
-buyButton.onclick = function(e) {
-  alert("ARGGGGG!");
+function encodeParams(place, price, desc, success_url, fail_url) {
+  window.name = [place,price,desc,success_url,fail_url].join(";");
+}
 
-  try {
+function decodeParams() {
+  var params = window.name.split(";");
+  return {
+    place: params[0],
+    price: params[1],
+    desc: params[2],
+    success_url: params[3],
+    fail_url: params[4]
+  };
+}
+
+function showConfirmationPage(place, price, desc, success_url, fail_url) {
+  encodeParams(place, price, desc, success_url, fail_url);
+
   // See PayPalMobilePGPlugin.js for full documentation
-  // set environment you want to use
+  try {
   window.plugins.PayPalMobile.setEnvironment("PayPalEnvironmentSandbox");
+  window.plugins.PayPalMobile.prepareForPayment("AVGMWBDcyX9Tq0kAhaQjDbXAv3U_xhS5Sc1IO2N-Vv7aLmR4kNVnF0Urdkmf");
+  } catch (err) {
+    alert(err.message);
+  }
 
-  // create a PayPalPayment object, usually you would pass parameters dynamically
-  var payment = new PayPalPayment("1.99", "USD", "Awesome saws");
+  window.location.href = "confirm.html"
+}
 
-  // define a callback when payment has been completed
+function on_confirm_load() {
+  var params = decodeParams();
+  document.getElementById("place").innerHTML = params.place;
+  document.getElementById("price").innerHTML = params.price;
+  document.getElementById("desc").innerHTML = params.desc;
+}
+
+function on_pay() {
+  var params = decodeParams();
+  var payment = new PayPalPayment(params.price, "USD", params.place + ": " + params.desc);
+
   var completionCallback = function(proofOfPayment) {
     // TODO: Send this result to the server for verification;
     // see https://developer.paypal.com/webapps/developer/docs/integration/mobile/verify-mobile-payment/ for details.
     alert("Proof of payment: " + JSON.stringify(proofOfPayment));
     console.log("Proof of payment: " + JSON.stringify(proofOfPayment));
+    window.location.href = params.success_url;
   }
 
-  // define a callback if payment has been canceled
   var cancelCallback = function(reason) {
     alert("Payment cancelled: " + reason);
     console.log("Payment cancelled: " + reason);
+    window.location.href = params.fail_url;
   }
 
   // launch UI, the PayPal UI will be present on screen until user cancels it or payment completed
-  window.plugins.PayPalMobile.prepareForPayment("AVGMWBDcyX9Tq0kAhaQjDbXAv3U_xhS5Sc1IO2N-Vv7aLmR4kNVnF0Urdkmf");
   window.plugins.PayPalMobile.presentPaymentUI("AVGMWBDcyX9Tq0kAhaQjDbXAv3U_xhS5Sc1IO2N-Vv7aLmR4kNVnF0Urdkmf", "rr3lin+paypal-facilitator@gmail.com", "amy@twiggy.com", payment, completionCallback, cancelCallback);
+}
 
-  alert("done");
-
-  } catch (err) {
-    alert(err.message);
-  }
+var buyButton = document.getElementById("buyButton");
+buyButton.onclick = function(e) {
+  showConfirmationPage("Hey", "20", "nice desc", "success.html", "index.html");
 }
