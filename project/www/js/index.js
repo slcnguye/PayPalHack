@@ -106,8 +106,7 @@ function on_confirm_load() {
 function on_pay() {
   var params = decodeParams();
   params.price = Number(document.getElementById("total").innerHTML);
-  var price = Number(document.getElementById("price").value).toFixed(2);
-  var payment = new PayPalPayment(price, "USD", document.getElementById("place").value + ": " + document.getElementById("desc").value);
+  var payment = new PayPalPayment(params.price, "USD", params.place + ": " + params.desc);
 
   var completionCallback = function(proofOfPayment) {
     // TODO: Send this result to the server for verification;
