@@ -97,17 +97,16 @@ function showConfirmationPage(place, price, desc, success_url, fail_url) {
 
 function on_confirm_load() {
   var params = decodeParams();
-  document.getElementById("place").value = params.place;
-  document.getElementById("price").value = params.price;
-  document.getElementById("desc").value = params.desc;
+  document.getElementById("place").innerHTML = params.place;
+  document.getElementById("price").innerHTML = params.price;
+  document.getElementById("desc").innerHTML = params.desc;
   on_keyup();
 }
 
 function on_pay() {
   var params = decodeParams();
   params.price = Number(document.getElementById("total").innerHTML);
-  var price = Number(document.getElementById("price").value).toFixed(2);
-  var payment = new PayPalPayment(price, "USD", document.getElementById("place").value + ": " + document.getElementById("desc").value);
+  var payment = new PayPalPayment(params.price, "USD", params.place + ": " + params.desc);
 
   var completionCallback = function(proofOfPayment) {
     // TODO: Send this result to the server for verification;
