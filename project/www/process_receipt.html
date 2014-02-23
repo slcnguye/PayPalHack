@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Capture Photo</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+      <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+        var pictureSource;   // picture source
+        var imageData;   // picture source
+    var destinationType; // sets the format of returned value
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready",onDeviceReady,false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        pictureSource=navigator.camera.PictureSourceType;
+        destinationType=navigator.camera.DestinationType;
+
+        imageData = localStorage.imageData;
+        onPhotoDataSuccess();
+    }
+
+    // Called when a photo is successfully retrieved
+    //
+    function onPhotoDataSuccess() {
+        // Uncomment to view the base64-encoded image data
+
+        // Get image handle
+        //
+        var largeImage = document.getElementById('largeImage');
+
+        // Unhide image elements
+        //
+        largeImage.style.display = 'block';
+
+        // Show the captured photo
+        // The in-line CSS rules are used to resize the image
+        largeImage.src = imageData;
+        onSuccess();
+    }
+
+    function successCallback(result) {
+        alert("OK");
+    }
+
+    function errorCallback(errorxhr, errorType, exception) {//Triggered if an error communicating with server  
+        var errorMessage = exception || xhr.statusText; //If exception null, then default to xhr.statusText  
+        alert( "There was an error creating your contact: " + errorMessage );  
+    }   
+
+    function onFail(message) {
+        alert('Failed because: ' + message);
+    }
+
+    function onSuccess() {        
+        var languageFrom = "en";
+        var apiKey = "pXKFhjFbns";
+        // Picture successfully taken      
+        alert("Decoding File");
+
+            // File upload options
+            var options = new FileUploadOptions();
+
+            options.fileKey = "image";
+            options.fileName = imageData.substr(imageData.lastIndexOf('/') + 1);
+            options.mimeType = "image/jpeg";
+            options.chunkedMode = false;
+
+            // Adding language and apikey parameters in the request
+            var params = new Object();
+            params.language = languageFrom;
+            params.apikey = apiKey;
+            options.params = params;
+            // Doing request
+            var fileTransfer = new FileTransfer();
+            fileTransfer.upload(imageData, "http://api.ocrapiservice.com/1.0/rest/ocr", function (response) {
+                alert(decodeURIComponent(response.response));
+
+                // Showing response data
+                if (response.responseCode == 200) {
+                    //$("#resultText").html("Success");
+                } else {
+                    //$("#resultText").html("Failed");
+                }
+
+                // Request successfully completed 
+                $("#extractedText").html(decodeURIComponent(response.response));
+
+            }, function (error) {
+                // Request unsuccessful
+                alert('Could not parse file, please try again');
+
+
+                // Showing error dialog
+                switch (error.code) {
+                    case FileTransferError.FILE_NOT_FOUND_ERR: navigator.notification.alert("File not found.", null, "Failed"); break;
+                    case FileTransferError.INVALID_URL_ERR: navigator.notification.alert("Invalid URL.", null, "Failed"); break;
+                    case FileTransferError.CONNECTION_ERR: navigator.notification.alert("Connection error.", null, "Failed"); break;
+                }
+            }, options);
+
+        //}
+    }
+
+
+    </script>
+  </head>
+  <body>
+	<h1>TWIGGY</h1>
+    <img style="display:none;" width="100" height="100" id="largeImage" src=""/>     
+  </body>
+</html>
